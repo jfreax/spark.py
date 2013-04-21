@@ -29,7 +29,7 @@ def getSparks( numbers ):
 
 def stringToNumerList( string ):
 	numbers = []
-	for n in numberString:
+	for n in string:
 		try:
 			numbers.append(float(n))
 		except ValueError:
@@ -46,7 +46,7 @@ EXAMPLES:
   ▁▁▃▂█
   spark.py 1.2 5.5 22.9 13.2 53.3
   ▁▁▃▂█
-  sparkpy 0,30,55,80,33,150
+  spark.py 0,30,55,80,33,150
   ▁▂▃▄▂.█
   echo 9 13 5 17 1 | spark.py
   ▄▆▂█▁'''
