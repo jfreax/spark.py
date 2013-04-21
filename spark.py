@@ -27,7 +27,7 @@ def getSparks( numbers ):
 	return output
 
 
-def stringToNumerList( string ):
+def stringToNumberList( string ):
 	numbers = []
 	for n in string:
 		try:
@@ -55,7 +55,7 @@ EXAMPLES:
 if __name__ == "__main__":
 
 	def convertAndPrint( numberString ):
-		numbers = stringToNumerList( numberString )
+		numbers = stringToNumberList( numberString )
 		if len(numbers) <= 2:
 			print help()
 		else:
