@@ -17,6 +17,10 @@ spark.py VALUE [,] ...
 	  ▄▆▂█▁
 
 
+
+	  from spark import getSparks
+	  print getSparks([1, 5, 22, 13, 53])
+
 # Thanks to
  
 Idea from Zach Holman @ https://github.com/holman/spark
