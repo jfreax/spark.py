@@ -19,31 +19,18 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
-
 import sys
 import select
-
 import fileinput
 
 sparks = ['▁','▂','▃','▄','▅','▆','▇','█']
-def getSparks( numbers ):
-	maximum = 0
-	minimum = sys.maxint
-	for n in numbers:
-		if n > maximum:
-			maximum = n
-		if n < minimum:
-			minimum = n
 
+def getSparks( numbers ):
+	maximum = max(numbers)
+	minimum = min(numbers)
 
 	div = float(maximum - minimum)
-	output = ""
-
-	for n in numbers:
-		pos = int((n - minimum)/div * 7)
-		output += sparks[pos]
-
-	return output
+	return ''.join( sparks[int((n - minimum)/div * 7)] for n in numbers)
 
 
 def stringToNumberList( string ):
