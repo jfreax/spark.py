@@ -31,6 +31,8 @@ def getSparks( numbers ):
 	minimum = min(numbers)
 
 	div = float(maximum - minimum)
+	if div == 0:
+		div = 1
 	return ''.join( sparks[int((n - minimum)/div * 7)] for n in numbers)
 
 
